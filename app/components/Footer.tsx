@@ -17,7 +17,7 @@ const Footer = () => {
     ]
 
     return (
-        <section className='w-full min-h-[50vh] border-b border-[#82A891] flex flex-col font-sans lg:py-8 md:py-8 py-4 justify-between '>
+        <section className='w-full min-h-fit border-b border-[#82A891] flex flex-col font-sans lg:py-8 md:py-8 py-4 justify-between '>
             <div className="w-full flex flex-col justify-between items-start p-6 ">
                 <div className="flex flex-col items-start justify-end">
                     <p className="lg:text-2xl text-base font-mono tracking-tighter font-medium uppercase">Varad Puranik</p>
