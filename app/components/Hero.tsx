@@ -67,7 +67,7 @@ export const DottedGlowBg: React.FC = () => {
 
 const Hero = () => {
   return (
-    <section className="relative  flex flex-col items-start justify-start lg:h-[558px] h-fit border-b border-[#82A891] overflow-hidden">
+    <section className="relative flex flex-col items-start justify-start lg:h-[558px] h-fit border-b border-[#82A891] overflow-hidden">
       <div id="hero-banner" className="relative z-10 w-full border-b border-[#82A891] ">
       <DottedGlowBg />
         <div className="w-full lg:h-64 h-42 flex items-center font-bold text-foreground/75 text-center justify-center font-mono lg:text-3xl text-xl tracking-tight capitalize mask-radial-from-10% ">
@@ -105,8 +105,8 @@ const Hero = () => {
       </div>
       <div id="hero-button" className=" flex lg:flex-row flex-col justify-between w-full lg:items-center items-start gap-2 lg:px-6 px-3 my-4 lg:my-0 lg:mt-4 gap-y-4">
         <div className="">
-            <Button href="/" className='lg:text-base text-sm capitalize px-4 py-1'>View Work</Button>
-            <Button href="/" className='lg:text-base text-sm capitalize px-4 py-1 bg-transparent ring-0 shadow-none border-none'>Explore Components</Button>   
+            <Button href="Work" className='lg:text-base text-sm capitalize px-4 py-1'>View Work</Button>
+            <Button href="templete" className='lg:text-base text-sm capitalize px-4 py-1 bg-transparent ring-0 shadow-none border-none'>Explore Components</Button>   
         </div>
         <div className="flex items-start gap-2 pl-2 w-fit h-6 overflow-hidden mask-t-from-75% mask-b-from-75%">
             <div className="w-2 h-2 mt-1.5  bg-foreground rounded-full flex items-center justify-center">

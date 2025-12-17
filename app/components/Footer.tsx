@@ -2,22 +2,21 @@
 import Link from 'next/link'
 import { IconBrandGithub, IconBrandLinkedin, IconBrandX, IconPaperclip } from '@tabler/icons-react';
 import { motion } from 'motion/react';
+import { cn } from '@/lib/utils';
 
-
-
-const Footer = () => {
+const Footer = ({ className }: { className?: string }) => {
 
 
     const links = [
-        { label: "Work", href: "/" },
-        { label: "Components", href: "/" },
-        { label: "Services", href: "/" },
+        { label: "Work", href: "Work" },
+        { label: "Components", href: "templete" },
+        { label: "Services", href: "service" },
         { label: "Blog", href: "/" },
-        { label: "Contact", href: "/" },
+        { label: "Contact", href: "" },
     ]
 
     return (
-        <section className='w-full min-h-fit border-b border-[#82A891] flex flex-col font-sans lg:py-8 md:py-8 py-4 justify-between '>
+        <section className={cn('w-full min-h-fit border-b border-[#82A891] flex flex-col font-sans lg:py-8 md:py-8 py-4 justify-between', className)}>
             <div className="w-full flex flex-col justify-between items-start p-6 ">
                 <div className="flex flex-col items-start justify-end">
                     <p className="lg:text-2xl text-base font-mono tracking-tighter font-medium uppercase">Varad Puranik</p>

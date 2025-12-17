@@ -43,7 +43,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" />
       </head>
       <body
-        className={`${DepartureMono.variable} ${inter.variable} ${geistMono.variable} antialiased`}
+        className={`${DepartureMono.variable} ${inter.variable} ${geistMono.variable} antialiased `}
       >
         {children}
       </body>

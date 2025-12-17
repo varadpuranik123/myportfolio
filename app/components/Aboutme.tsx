@@ -53,7 +53,7 @@ const Aboutme = () => {
                 <div className="flex flex-col justify-between lg:py-1 md:py-1 py-6 items-start gap-y-6 lg:gap-y-0 ">
                     <div className="flex flex-col gap-1 max-w-lg">
                         <h1 className="text-3xl font-semibold tracking-tight ">Varad Puranik</h1>
-                        <p className="text-sm text-foreground/75 font-semibold tracking-tight leading-[1.3] ">
+                        <p className="text-sm font-medium text-foreground/90 tracking-tight leading-[1.3] ">
                             I'm a UI/UX Designer and Frontend Developer who focuses on creating tasteful interfaces.
                             I enjoy working across design and development because it allows me to maintain intent from concept to implementation, ensuring that what's designed is exactly what ships.
                         </p>

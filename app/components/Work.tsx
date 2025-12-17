@@ -1,27 +1,29 @@
 import React from 'react'
 import Heading from './Heading'
 import Image from 'next/image'
-import { IconBrandGithub, IconWorld, IconBrandFigma, IconArrowUpRight } from '@tabler/icons-react';
+import { IconBrandGithub, IconWorld, IconBrandFigma, IconArrowUpRight, IconBrandFramer } from '@tabler/icons-react';
 import Link from 'next/link';
 import Button from './Button';
+import { cn } from "@/lib/utils";
+
 
 
 const workData = [
   {
-    image: "/favicon.png",
+    image: "/projectImages/firstProjectImage.png",
     imageAlt: "Hero Image",
-    title: "Astrology Platform",
+    title: "Partner App for Astrologers ",
     links: [
-      {
-        href: "https://github.com/varadpuranik123",
-        icon: <IconBrandGithub className='lg:size-6 size-5 cursor-pointer opacity-75 hover:opacity-100 transition-all duration-200' />,
-        external: true,
-      },
-      {
-        href: "https://vdpop.vercel.app",
-        icon: <IconWorld className='lg:size-6 size-5 cursor-pointer opacity-75 hover:opacity-100 transition-all duration-200' />,
-        external: true,
-      },
+      // {
+      //   href: "https://github.com/varadpuranik123",
+      //   icon: <IconBrandGithub className='lg:size-6 size-5 cursor-pointer opacity-75 hover:opacity-100 transition-all duration-200' />,
+      //   external: true,
+      // },
+      // {
+      //   href: "https://vdpop.vercel.app",
+      //   icon: <IconWorld className='lg:size-6 size-5 cursor-pointer opacity-75 hover:opacity-100 transition-all duration-200' />,
+      //   external: true,
+      // },
     ],
     description: "End-to-end UI/UX design for a consumer-facing astrology platform focused on clarity, trust, and seamless consultation flow.",
     tools: [
@@ -29,15 +31,40 @@ const workData = [
         label: "figma",
         icon: <IconBrandFigma className='lg:size-5 size-4' />
       },
+
+    ],
+    detailsUrl: "../projects/firstProject"
+  },
+  // Add more card objects here as needed.
+  {
+    image: "/projectImages/secondProjectImage.png",
+    imageAlt: "Hero Image",
+    title: "Minimalist Portfolio",
+    links: [
+      // {
+      //   href: "https://github.com/varadpuranik123",
+      //   icon: <IconBrandGithub className='lg:size-6 size-5 cursor-pointer opacity-75 hover:opacity-100 transition-all duration-200' />,
+      //   external: true,
+      // },
+      {
+        href: "https://harshal15.framer.website/",
+        icon: <IconWorld className='lg:size-6 size-5 cursor-pointer opacity-75 hover:opacity-100 transition-all duration-200' />,
+        external: true,
+      },
+    ],
+    description: "Designed and developed a personal portfolio focused on clean visuals, structured layouts, and subtle motion to present work with clarity.",
+    tools: [
       {
         label: "figma",
         icon: <IconBrandFigma className='lg:size-5 size-4' />
+      },
+      {
+        label: "Framer",
+        icon: <IconBrandFramer className='lg:size-5 size-4' />
       }
     ],
-    detailsUrl: "/"
+    detailsUrl: "../projects/SecondProject"
   },
-  // Add more card objects here as needed.
-  
 ];
 
 const WorkCard = ({
@@ -51,7 +78,7 @@ const WorkCard = ({
 }: typeof workData[0]) => (
   <div className=" border-transparent hover:scale-98 transition-all duration-200 ring-1 ring-[#82A891]/30 shadow-sm shadow-[#82A891]/10 rounded-xl w-full h-fit pb-3 flex flex-col overflow-hidden">
     <div className="bg-black/10 w-full h-80">
-      <Image className=' object-cover rounded-sm grayscale w-full h-full' src={image} alt={imageAlt} width={100} height={100} />
+      <Image className=' object-cover w-full h-full' src={image} alt={imageAlt} width={1920} height={1920} />
     </div>
     <div className="pt-4 pb-2 px-4 flex items-center justify-between gap-1 ">
       <h2 className="text-lg font-semibold tracking-tight">{title}</h2>
@@ -93,9 +120,14 @@ const WorkCard = ({
   </div>
 );
 
-const Work = () => {
+
+type WorkProps = {
+  className?: string;
+};
+
+const Work = ({ className }: WorkProps) => {
   return (
-    <section className='w-full min-h-fit border-b border-[#82A891] flex flex-col font-sans'>
+    <section className={cn('w-full min-h-fit border-b border-[#82A891] flex flex-col font-sans pb-6', className)}>
       <Heading className='p-6'>
         Selected Work
       </Heading>
@@ -104,16 +136,16 @@ const Work = () => {
           <WorkCard key={idx} {...work} />
         ))}
       </div>
-      <div className="w-full border-t border-[#82A891] h-12 mt-4 flex items-center justify-center">
-      <Button href='/' className="flex gap-1 justify-center py-1.5 items-center">
+      {/* <div className="w-full border-t border-[#82A891] h-12 mt-4 flex items-center justify-center">
+        <Button href='/' className="flex gap-1 justify-center py-1.5 items-center">
           See All Projects
         </Button>
-      </div>
+      </div> */}
     </section>
   )
 }
 
 
-     
+
 
 export default Work

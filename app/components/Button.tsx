@@ -11,6 +11,8 @@ type ButtonProps = {
 const Button: React.FC<ButtonProps> = ({ className = "", children, href, ...props }) => {
   return (
     <Link
+      target='_blank'
+      rel="noopener noreferrer"
       href={href ? href : "/"}
       className={cn(
         "text-sm px-3 py-0.5 rounded-sm bg-white border-transparent ring-1 ring-black/10 shadow-sm shadow-black/10 font-semibold hover:-translate-y-px cursor-pointer tracking-tight transition-all duration-300",
@@ -18,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({ className = "", children, href, ...prop
       )}
       {...props}
     >
-      {children}
+      {children ? children : "button"}
     </Link>
   );
 };

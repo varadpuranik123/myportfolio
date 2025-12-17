@@ -27,7 +27,7 @@ const CTASection = () => {
                     <IconPlus />
                     <div className="flex items-center justify-center bg-[#f0fdf4] w-16 h-16 ring-2 ring-[#82A891] shadow-sm shadow-[#82A891]/30 rounded-sm font-bold tracking-tighter text-lg "> YOU </div>
                 </div>
-                <Link href='/' className='perspective-near rotate-x-40 shadow-primary group hover:-translate-y-2 border active:translate-y-5 transition-all duration-200 ease-in-out relative font-semibold text-2xl bg-white rounded-full tracking-tight ring-2 border-y-2 mt-6  ring-[#82A891] '>
+                <Link href='' className='perspective-near rotate-x-40 shadow-primary group hover:-translate-y-2 border active:translate-y-5 transition-all duration-200 ease-in-out relative font-semibold text-2xl bg-white rounded-full tracking-tight ring-2 border-y-2 mt-6 ring-[#82A891] '>
 
                     <p className="px-6 py-4 ">Get in Touch</p>
                     {/* <div className=" border-b-4 absolute inset-0 rounded-full translate-y-4 active:translate-y-0 group-hover:translate-y-[27px] shadow-2xl "> </div> */}
