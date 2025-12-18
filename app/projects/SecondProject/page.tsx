@@ -35,7 +35,7 @@ const secondProject = () => {
         <div className="w-full flex border border-[#82A89133] rounded-lg justify-center mt-6 p-2 hover:scale-150 hover:shadow-2xl shadow-black/50 bg-white transition-all duration-500" style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}>
           <video
             className=" w-full h-fit rounded-md"
-            src="/projectImages/display.mp4"
+            src="/projectImages/secondprojectvideo.mp4"
             autoPlay={true}
             loop
             muted
