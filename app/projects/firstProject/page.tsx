@@ -19,7 +19,7 @@ const firstProject = () => {
             </Link>
           </div>
           <div className=" flex flex-col gap-2">
-            <Heading className='font-semibold text-foreground/75 text-2xl'>Partner App for Astrologers</Heading>
+            <Heading className='font-semibold text-foreground/75 text-2xl'>Coming Soon</Heading>
           </div>
         </div>
         <Footer />
