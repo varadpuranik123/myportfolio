@@ -127,7 +127,7 @@ type WorkProps = {
 
 const Work = ({ className }: WorkProps) => {
   return (
-    <section className={cn('w-full min-h-fit border-b border-[#82A891] flex flex-col font-sans pb-6', className)}>
+    <section id='work' className={cn('w-full min-h-fit border-b border-[#82A891] flex flex-col font-sans pb-6', className)}>
       <Heading className='p-6'>
         Selected Work
       </Heading>
