@@ -19,7 +19,7 @@ const secondProject = () => {
             <p className="text-sm tracking-tight font-mono font-semibold">Back To Project</p>
           </Link>
         </div>
-        <div className=" flex flex-col gap-2 mt-6">
+        <div className=" flex flex-col gap-2 lg:mt-6 md:mt-6 mt-2">
           <Heading className='font-semibold text-foreground/75 text-2xl mb-2'>Minimalist Portfolio</Heading>
           <p className="text-sm tracking-tight font-medium leading-[1.3]">
             Designed and developed a personal portfolio website to showcase selected work, and technical capabilities in a clear and structured way.
@@ -32,7 +32,7 @@ const secondProject = () => {
           </p>
         </div>
         <div className="">
-        <div className="w-full flex border border-[#82A89133] rounded-lg justify-center mt-6 p-2">
+        <div className="w-full flex border border-[#82A89133] rounded-lg justify-center mt-6 p-2 hover:scale-150 hover:shadow-2xl shadow-black/50 bg-white transition-all duration-500" style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}>
           <video
             className=" w-full h-fit rounded-md"
             src="/projectImages/display.mp4"
