@@ -5,6 +5,7 @@ import Heading from '@/app/components/Heading'
 import Navbar from '@/app/components/Navbar'
 import { Icon12Hours, IconArrowLeft, IconArrowRightToArc } from '@tabler/icons-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 
 
@@ -26,13 +27,13 @@ const secondProject = () => {
           </p>
           <p className="text-sm tracking-tight font-medium leading-[1.3]">
             The project focused on creating a minimal visual language, strong typographic hierarchy, and smooth interactions to ensure the content remains the primary focus. while motion was used selectively to enhance flow and engagement rather than distract.
-            </p>
+          </p>
           <p className="text-sm tracking-tight font-medium leading-[1.3]">
             The interface was designed in Figma and implemented using Framer, allowing for rapid iteration, responsive behavior, and polished micro-interactions. The final result is a lightweight, scalable portfolio that communicates both design taste and execution ability.
           </p>
         </div>
-        <div className="">
-        <div className="w-full flex border border-[#82A89133] rounded-lg justify-center mt-6 p-2 hover:scale-150 hover:shadow-2xl shadow-black/50 bg-white transition-all duration-500" style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}>
+        <div className=" flex flex-col gap-4">
+          {/* <div className="w-full flex border border-[#82A89133] rounded-lg justify-center mt-6 p-2 hover:scale-150 hover:shadow-2xl shadow-black/50 bg-white transition-all duration-500" style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}>
           <video
             className=" w-full h-fit rounded-md"
             src="/projectImages/secondprojectvideo.mp4"
@@ -42,7 +43,11 @@ const secondProject = () => {
           >
             Your browser does not support the video tag.
           </video>
-        </div>
+        </div> */}
+          <div className="border border-[#82A89133] overflow-hidden w-full h-96 rounded-md flex flex-col hover:scale-150 hover:shadow-2xl shadow-black/50 bg-white transition-all duration-500" style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}>
+            <Image src='/projectImages/FPimage.png' alt='First Image' className='w-full h-full object-cover' width={1920} height={1080} />
+          </div>
+
         </div>
       </div>
       <Footer />
