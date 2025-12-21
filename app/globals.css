@@ -28,3 +28,33 @@ body {
 .shadow-primary:active{
   box-shadow: 0 -4px 0px 0 #14532D;
 }
+
+.styleScroll{
+  /* Custom Scrollbar */
+  scrollbar-width: thin !important;
+  scrollbar-color: #82A891 #f0fdf4;
+}
+
+.styleScroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.styleScroll::-webkit-scrollbar-thumb {
+  background: #82A891;
+  border-radius: 8px;
+  min-height: 24px;
+}
+
+.styleScroll::-webkit-scrollbar-track {
+  background: #f0fdf4;
+  border-radius: 8px;
+}
+
+.styleScroll {
+  /* Force overflow for scrollbar to appear and be styled */
+  overflow-y: auto;
+  overflow-x: auto;
+  /* Make sure thinness is consistent on all browsers */
+  scrollbar-gutter: stable;
+}

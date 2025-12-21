@@ -2,6 +2,8 @@ import path from 'path';
 import { promises as fs } from 'fs';
 import type { FC } from 'react';
 import Button from '../components/Button';
+import InteractiveButton from '../components/DisplayComponents/InteractiveButton';
+// import InteractiveButton from '../templete/components/InteractiveButton';
 
 // IMPORT NEW COMPONENTS HERE AS NEEDED
 // import Card from '../components/Card';
@@ -27,7 +29,9 @@ async function loadUsageCode(relativePath: string): Promise<string> {
   if (usageCodeCache[relativePath]) return usageCodeCache[relativePath];
 
   try {
-    const fullPath = path.join(process.cwd(), relativePath);
+    const fullPath = path.isAbsolute(relativePath)
+      ? relativePath
+      : path.join(process.cwd(), relativePath);
     const code = await fs.readFile(fullPath, 'utf-8');
     usageCodeCache[relativePath] = code;
   } catch {
@@ -49,22 +53,14 @@ export async function getComponentsData(): Promise<ComponentItem[]> {
     features: string[];
   }> = [
     {
-      slug: 'simple-button',
-      name: 'Simple Button',
+      slug: 'interactive-button',
+      name: 'Interactive Button',
       description: 'A button with specific styles.',
-      component: Button,
-      usageCodePath: 'app/components/Button.tsx',
+      component: InteractiveButton,
+      usageCodePath: 'app/components/DisplayComponents/InteractiveButton.tsx',
       features: ['Blue Background', 'White Text', 'Padding included'],
     },
-    // Example for adding more components:
-    // {
-    //   slug: 'custom-card',
-    //   name: 'Custom Card',
-    //   description: 'A flexible card component.',
-    //   component: Card,
-    //   usageCodePath: 'app/components/Card.tsx',
-    //   features: ['Shadow', 'Padding', 'Rounded corners'],
-    // },
+
   ];
 
   // Load usageCode for each component in parallel

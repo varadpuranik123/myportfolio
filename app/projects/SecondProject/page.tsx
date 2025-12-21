@@ -45,7 +45,7 @@ const secondProject = () => {
             Your browser does not support the video tag.
           </video>
         </div> */}
-          <div className="border border-[#82A89133] overflow-hidden w-full aspect-video rounded-md flex flex-col hover:scale-130 hover:shadow-2xl shadow-black/50 bg-white transition-all duration-500" style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}>
+          <div className="border border-[#82A89133] overflow-hidden w-full aspect-video rounded-md flex flex-col hover:scale-140 hover:shadow-2xl shadow-black/50 bg-white transition-all duration-500" style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}>
             <div className="relative w-full h-0 pb-[56.25%]"> {/* 16:9 Aspect Ratio Box */}
               <Image
                 src="/projectImages/FPImage.png"
