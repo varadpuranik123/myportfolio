@@ -45,17 +45,22 @@ const secondProject = () => {
             Your browser does not support the video tag.
           </video>
         </div> */}
-          <div className="border border-[#82A89133] overflow-hidden w-full h-96 rounded-md flex flex-col hover:scale-150 hover:shadow-2xl shadow-black/50 bg-white transition-all duration-500" style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}>
-            <Image src='/projectImages/FPImage.png' alt='First Image' className='w-full h-full object-cover'
-                width={1920}
-                height={1080}
-                unoptimized
+          <div className="border border-[#82A89133] overflow-hidden w-full aspect-video rounded-md flex flex-col hover:scale-130 hover:shadow-2xl shadow-black/50 bg-white transition-all duration-500" style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}>
+            <div className="relative w-full h-0 pb-[56.25%]"> {/* 16:9 Aspect Ratio Box */}
+              <Image
+                src="/projectImages/FPImage.png"
+                alt="First Image"
+                fill
+                className="object-cover rounded-md"
                 priority
-                onError={(e) => { 
+                onError={(e) => {
                   e.currentTarget.onerror = null;
-                  e.currentTarget.src = 'https://placehold.co/1920x1080?text=Image+Not+Found'; 
+                  e.currentTarget.src = "https://placehold.co/800x450?text=Image+Not+Found";
                 }}
-            />
+                sizes="(max-width: 768px) 100vw, 800px"
+                unoptimized
+              />
+            </div>
           </div>
 
         </div>
