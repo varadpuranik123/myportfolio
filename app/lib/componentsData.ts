@@ -1,9 +1,7 @@
 import path from 'path';
 import { promises as fs } from 'fs';
 import type { FC } from 'react';
-import Button from '../components/Button';
 import InteractiveButton from '../components/DisplayComponents/InteractiveButton';
-// import InteractiveButton from '../templete/components/InteractiveButton';
 
 // IMPORT NEW COMPONENTS HERE AS NEEDED
 // import Card from '../components/Card';

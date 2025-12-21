@@ -7,9 +7,9 @@ import Button from './Button';
 
 // Nav links JSON
 const navLinks = [
-    { name: 'Work', href: 'Work' },
-    { name: 'Components', href: 'templete' },
-    { name: 'Services', href: 'service' }
+    { name: 'Work', href: '/Work' },
+    { name: 'Components', href: '/templete' },
+    { name: 'Services', href: '/service' }
 ];
 
 const Navbar = () => {
