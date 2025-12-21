@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Container from '@/app/components/Container'
 import Footer from '@/app/components/Footer'
@@ -45,7 +46,16 @@ const secondProject = () => {
           </video>
         </div> */}
           <div className="border border-[#82A89133] overflow-hidden w-full h-96 rounded-md flex flex-col hover:scale-150 hover:shadow-2xl shadow-black/50 bg-white transition-all duration-500" style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}>
-            <Image src='/projectImages/FPimage.png' alt='First Image' className='w-full h-full object-cover' width={1920} height={1080} />
+            <Image src='/projectImages/FPImage.png' alt='First Image' className='w-full h-full object-cover'
+                width={1920}
+                height={1080}
+                unoptimized
+                priority
+                onError={(e) => { 
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = 'https://placehold.co/1920x1080?text=Image+Not+Found'; 
+                }}
+            />
           </div>
 
         </div>
