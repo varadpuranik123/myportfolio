@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +47,7 @@ export default function RootLayout({
         className={`${DepartureMono.variable} ${inter.variable} ${geistMono.variable} antialiased `}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
