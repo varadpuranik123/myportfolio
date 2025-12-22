@@ -4,8 +4,7 @@ import Container from '@/app/components/Container';
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
 import { IconArrowLeft, IconArrowRight, IconCode, IconList } from '@tabler/icons-react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { xcode } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import CodeBlock from '@/app/components/CodeBlock';
 
 export default async function SingleTemplate({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -43,15 +42,15 @@ export default async function SingleTemplate({ params }: { params: Promise<{ slu
           <div className="flex items-center gap-2.5">
             {prev ? <Link href={`/templete/${prev.slug}`} className="group relative flex">
               <IconArrowLeft className='bg-white p-1 ring-1 ring-[#82A891]/30 shadow-sm shadow-[#82A891]/10 rounded-md hover:bg-[#82a891]/1 transition-all duration-200 ease-in-out ' />
-              <div className="absolute -top-0.5 -left-16 whitespace-nowrap -z-1 group-hover:z-9 group-hover:scale-100 scale-0 group-hover:-translate-y-8.5 transition-all duration-200 ease-in-out shadow-sm shadow-[#82A891]/10 ring-1 ring-[#82A891] px-2 py-1 rounded-sm font-medium text-sm flex items-center justify-center w-fit gap-2 bg-white">
-                <p className=" tracking-tight">Previous Components</p>
+              <div className="absolute -top-0.5 -left-16 whitespace-nowrap blur-lg group-hover:blur-none -z-1 group-hover:z-9 group-hover:scale-100 scale-0 group-hover:-translate-y-8.5 transition-all duration-300 ease-in-out shadow-sm shadow-[#82A891]/10 ring-1 ring-[#82A891] px-2 py-1 rounded-sm font-medium text-sm flex items-center justify-center w-fit gap-2 bg-white">
+                <p className=" tracking-tight font-semibold">Previous Components</p>
               </div>
             </Link> : <div />}
 
             {next ? <Link href={`/templete/${next.slug}`} className="group relative flex">
               <IconArrowRight className='bg-white p-1 ring-1 ring-[#82A891]/30 shadow-sm shadow-[#82A891]/10 rounded-md hover:bg-[#82a891]/1 transition-all duration-200 ease-in-out ' />
-              <div className="absolute -top-0.5 -left-14 whitespace-nowrap -z-1 group-hover:z-9 group-hover:scale-100 scale-0 group-hover:-translate-y-8.5 transition-all duration-200 ease-in-out shadow-sm shadow-[#82A891]/10 ring-1 ring-[#82A891] px-2 py-1 rounded-sm font-medium text-sm flex items-center justify-center w-fit gap-2 bg-white">
-                <p className=" tracking-tight">Next Components</p>
+              <div className="absolute -top-0.5 -left-14 whitespace-nowrap blur-lg group-hover:blur-none -z-1 group-hover:z-9 group-hover:scale-100 scale-0 group-hover:-translate-y-8.5 transition-all duration-300 ease-in-out shadow-sm shadow-[#82A891]/10 ring-1 ring-[#82A891] px-2 py-1 rounded-sm font-medium text-sm flex items-center justify-center w-fit gap-2 bg-white">
+                <p className=" tracking-tight font-semibold">Next Components</p>
               </div>
             </Link> : <div />}
           </div>
@@ -70,9 +69,8 @@ export default async function SingleTemplate({ params }: { params: Promise<{ slu
             <IconCode className='p-0.5 '/>
             <h3 className="text-base tracking-tight font-semibold">Usage Code</h3>
           </div>
-          <pre className=" p-2 ring-1 ring-[#82A891]/30 styleScroll shadow-sm shadow-[#82A891]/10 overflow-auto  rounded-md bg-white">
-            <SyntaxHighlighter className=''  language='javascript' style={xcode} >{item.usageCode}</SyntaxHighlighter>
-          </pre>
+          <p className="lg:text-sm text-xs gap-1 font-medium mb-2 lg:-mt-1">Create the file first <code className=" bg-foreground/15 font-semibold py-0.5 px-1 rounded-md">{item.fileLocation}</code> and put the code below </p>
+          <CodeBlock code={item.usageCode} language="javascript" />
         </div>
         <div className="flex flex-col p-6 gap-2">
           <div className="flex items-center gap-0.5">

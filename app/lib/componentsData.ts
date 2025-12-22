@@ -2,6 +2,7 @@ import path from 'path';
 import { promises as fs } from 'fs';
 import type { FC } from 'react';
 import InteractiveButton from '../components/DisplayComponents/InteractiveButton';
+import TextAnimation from '../components/DisplayComponents/TextAnimation';
 
 // IMPORT NEW COMPONENTS HERE AS NEEDED
 // import Card from '../components/Card';
@@ -11,6 +12,7 @@ export interface ComponentItem {
   slug: string;
   name: string;
   description: string;
+  fileLocation: string;
   component: FC<any>;
   usageCode: string;
   features: string[];
@@ -46,17 +48,28 @@ export async function getComponentsData(): Promise<ComponentItem[]> {
     slug: string;
     name: string;
     description: string;
+    fileLocation: string;
     component: FC<any>;
     usageCodePath: string;
     features: string[];
   }> = [
     {
       slug: 'interactive-button',
-      name: 'Interactive Button',
-      description: 'A button with specific styles.',
+      name: '3D Perspective Button',
+      description: 'A tactile 3D button with a CSS perspective transform that reveals a profile and icon pairing on hover.',
+      fileLocation: 'components/InteractiveButton.tsx',
       component: InteractiveButton,
       usageCodePath: 'app/components/DisplayComponents/InteractiveButton.tsx',
-      features: ['Blue Background', 'White Text', 'Padding included'],
+      features: ['3D Perspective & Rotation', 'Hover reveal effect', 'Tactile box-shadow depth', 'Active state compression'],
+    },
+    {
+      slug: 'text-animation',
+      name: 'Status Text Scroller',
+      description: 'Infinite vertical scroll animation with a pulsing status dot.',
+      fileLocation: 'components/TextAnimation.tsx',
+      component: TextAnimation,
+      usageCodePath: 'app/components/DisplayComponents/TextAnimation.tsx',
+      features: ['Pulsing indicator', 'Spring-based scrolling', 'Infinite loop'],
     },
 
   ];
@@ -71,6 +84,7 @@ export async function getComponentsData(): Promise<ComponentItem[]> {
     slug: item.slug,
     name: item.name,
     description: item.description,
+    fileLocation: item.fileLocation,
     component: item.component,
     usageCode: usageCodes[idx],
     features: item.features,

@@ -7,7 +7,7 @@ const InteractiveButton = () => {
             <div className="absolute inset-0 flex items-center mask-b-from-75% justify-center gap-2 group-active:gap-1 group-active:translate-y-0 group-active:scale-60 scale-0 group-hover:scale-100 group-hover:-translate-y-16 transition-all duration-200 z-9" style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.7, 1)" }}>
                 <Image className=' object-contain rounded-sm grayscale ring-2 ring-[#82A891] shadow-sm shadow-[#82A891]/30 lg:size-16 size-12' src="/favicon.png" alt="Hero Image" width={100} height={100} />
                 <IconPlus />
-                <div className="flex items-center justify-center bg-[#f0fdf4] w-16 h-16 ring-2 ring-[#82A891] shadow-sm shadow-[#82A891]/30 rounded-sm font-bold tracking-tighter text-lg "> YOU </div>
+                <div className="flex items-center justify-center bg-[#f0fdf4] lg:w-16 w-12 lg:h-16 h-12 ring-2 ring-[#82A891] shadow-sm shadow-[#82A891]/30 rounded-sm font-bold tracking-tighter text-lg "> YOU </div>
             </div>
             <div
                 className="

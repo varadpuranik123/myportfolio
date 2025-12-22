@@ -26,11 +26,11 @@ export default async function TemplateIndex() {
                 </div>
                 <div className=" flex flex-col ">
                     {componentsData.filter(item => item.slug).map((item) => (
-                        <Link key={item.slug} href={`/templete/${item.slug}`} className='border-b last:border-b-0 p-6 border-[#82A891] hover:bg-[#82A891]/10 transition-all duration-200 flex flex-row-reverse justify-between' >
-                            <div className=" bg-white w-1/2 h-60 rounded-md flex items-center justify-center transition-all duration-200 ring-1 ring-[#82A891]/30 ">
+                        <Link key={item.slug} href={`/templete/${item.slug}`} className='border-b last:border-b-0 p-6 border-[#82A891] hover:bg-[#82A891]/10 transition-all duration-200 flex lg:flex-row-reverse md:flex-row-reverse flex-col justify-between' >
+                            <div className=" bg-white lg:w-1/2 md:w-1/2 w-full h-60 rounded-md flex items-center justify-center transition-all duration-200 ring-1 ring-[#82A891]/30 ">
                                 <item.component />
                             </div>
-                            <div  className=' w-1/3 h-60 flex flex-col justify-between '>
+                            <div  className=' lg:w-1/3 md:w-1/3 w-full lg:h-60 md:h-60 h-28 flex flex-col justify-between lg:mt-0 md:mt-0 mt-3'>
                                 <div className="">
                                     <h2 className="text-xl tracking-tight font-semibold mt-2">{item.name}</h2>
                                     <p className="text-sm tracking-tight font-medium">{item.description}</p>
