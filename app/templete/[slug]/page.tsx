@@ -26,6 +26,8 @@ export default async function SingleTemplate({ params }: { params: Promise<{ slu
   const prev = componentsData[index - 1];
   const next = componentsData[index + 1];
   const ComponentToRender = item.component;
+  const PrevComponentToRender = prev?.component;
+  const NextComponentToRender = next?.component;
 
 
   return (
@@ -66,7 +68,7 @@ export default async function SingleTemplate({ params }: { params: Promise<{ slu
         </div>
         <div className="p-6 flex flex-col gap-2">
           <div className="flex items-center gap-0.5">
-            <IconCode className='p-0.5 '/>
+            <IconCode className='p-0.5 ' />
             <h3 className="text-base tracking-tight font-semibold">Usage Code</h3>
           </div>
           <p className="lg:text-sm text-xs gap-1 font-medium mb-2 lg:-mt-1">Create the file first <code className=" bg-foreground/15 font-semibold py-0.5 px-1 rounded-md">{item.fileLocation}</code> and put the code below </p>
@@ -74,22 +76,32 @@ export default async function SingleTemplate({ params }: { params: Promise<{ slu
         </div>
         <div className="flex flex-col p-6 gap-2">
           <div className="flex items-center gap-0.5">
-            <IconList className='p-0.5 '/>
+            <IconList className='p-0.5 ' />
             <h3 className="text-base tracking-tight font-semibold">Features</h3>
           </div>
           <ul className='list-disc text-sm tracking-tight font-medium pl-6 text-foreground/90 space-y-1 mt-2'>
-            {item.features.map((feature, i) => <li key={i}>{feature}</li> )}
+            {item.features.map((feature, i) => <li key={i}>{feature}</li>)}
           </ul>
         </div>
         <div className="flex items-center p-6 justify-between border-t mt-4 border-[#82A891]">
           {prev ? <Link href={`/templete/${prev.slug}`} className="w-fit flex gap-1 items-center group">
-            <div className="flex gap-1 items-center">
+            <div className="flex gap-1 items-center relative">
+
+              <div className=" border absolute w-60 h-40 flex items-center justify-center -top-20 -left-10 bg-white rounded-md p-2 blur-lg scale-0 group-hover:scale-100 group-hover:blur-none group-hover:-translate-y-26 transition-all duration-300">
+                <PrevComponentToRender />
+              </div>
+
               <IconArrowLeft className='size-4 transition-all duration-200 group-hover:-translate-x-0.5' />
               <p className='tracking-tight font-semibold text-sm '>Previous Components</p>
             </div>
           </Link> : <div />}
           {next ? <Link href={`/templete/${next.slug}`} className="w-fit flex gap-1 items-center group">
-            <div className="flex gap-1 items-center">
+            <div className="flex gap-1 items-center relative">
+
+              <div className=" border absolute w-60 h-40 flex items-center justify-center -top-20 -left-10 bg-white rounded-md p-2 blur-lg scale-0 group-hover:scale-100 group-hover:blur-none group-hover:-translate-y-26 transition-all duration-300">
+                <NextComponentToRender />
+              </div>
+
               <p className='tracking-tight font-semibold text-sm '>Next Components</p>
               <IconArrowRight className='size-4 transition-all duration-200 group-hover:translate-x-0.5' />
             </div>
