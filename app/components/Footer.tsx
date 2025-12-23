@@ -36,17 +36,19 @@ const Footer = ({ className }: { className?: string }) => {
                         </Link>
                     </div>
                 </div>
-                <div className="flex w-full items-center lg:gap-6 md:gap-6 gap-3 mt-16  ">
+                <div className="flex w-full lg:flex-row md:flex-row flex-col lg:items-center md:items-center lg:gap-6 md:gap-6 gap-3 mt-16  ">
                     <h3 className="text-lg tracking-tight font-semibold">Links</h3>
-                    {links.map((link, idx) => (
-                        <Link
-                            key={idx}
-                            href={link.href}
-                            className="text-sm tracking-tight font-semibold flex flex-col gap-1 opacity-75 hover:opacity-100 transition-all duration-300"
-                        >
-                            {link.label}
-                        </Link>
-                    ))}
+                    <div className=" flex lg:gap-6 md:gap-6 gap-2 items-center flex-warp">
+                        {links.map((link, idx) => (
+                            <Link
+                                key={idx}
+                                href={link.href}
+                                className="lg:text-sm text-xs tracking-tight font-semibold flex flex-col gap-1 opacity-75 hover:opacity-100 transition-all duration-300"
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </div>
 

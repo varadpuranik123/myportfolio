@@ -71,7 +71,7 @@ export default async function SingleTemplate({ params }: { params: Promise<{ slu
             <IconCode className='p-0.5 ' />
             <h3 className="text-base tracking-tight font-semibold">Usage Code</h3>
           </div>
-          <p className="lg:text-sm text-xs gap-1 font-medium mb-2 lg:-mt-1">Create the file first <code className=" bg-foreground/15 font-semibold py-0.5 px-1 rounded-md">{item.fileLocation}</code> and put the code below </p>
+          <p className="lg:text-sm text-xs gap-1 font-medium mb-2 lg:-mt-1">Create the file first <code className=" bg-foreground/15 font-semibold py-0.5 px-1 rounded-md ">{item.fileLocation}</code> and put the code below </p>
           <CodeBlock code={item.usageCode} language="javascript" />
         </div>
         <div className="flex flex-col p-6 gap-2">

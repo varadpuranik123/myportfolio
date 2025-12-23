@@ -38,7 +38,7 @@ export const DesktopNavbar = () => {
                     </Link>
                 ))}
             </div>
-            <Button href='https://drive.google.com/file/d/1MAS_fTZHq872cINWJ88LZCdNPj7FlIzs/view?usp=sharing'>Resume</Button>
+            <Button href='https://drive.google.com/file/d/1MAS_fTZHq872cINWJ88LZCdNPj7FlIzs/view?usp=sharing' className=''>Resume</Button>
         </nav>
     )
 }
@@ -93,8 +93,8 @@ export const MobileNavbar = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2, delay: navLinks.length * 0.1 }}
-                        className="">
-                            <Button href='https://drive.google.com/file/d/1MAS_fTZHq872cINWJ88LZCdNPj7FlIzs/view?usp=sharing' className="text-4xl w-full py-4 uppercase px-3 rounded-sm bg-white border-transparent ring-1 ring-black/10 shadow-sm shadow-black/10 font-semibold hover:-translate-y-px cursor-pointer tracking-tight transition-all duration-300">Resume</Button>
+                        className="w-full h-fit">
+                            <Button href='https://drive.google.com/file/d/1MAS_fTZHq872cINWJ88LZCdNPj7FlIzs/view?usp=sharing' className="text-4xl flex justify-center w-full py-4 uppercase px-3 bg-white border-transparent ring-1 ring-black/10 shadow-sm shadow-black/10 font-semibold hover:-translate-y-px cursor-pointer tracking-tight transition-all duration-300">Resume</Button>
                         </motion.div>
                     </motion.div>
                 )}

@@ -4,10 +4,6 @@ import type { FC } from 'react';
 import InteractiveButton from '../components/DisplayComponents/InteractiveButton';
 import TextAnimation from '../components/DisplayComponents/TextAnimation';
 
-// IMPORT NEW COMPONENTS HERE AS NEEDED
-// import Card from '../components/Card';
-// import Input from '../components/Input';
-
 export interface ComponentItem {
   slug: string;
   name: string;

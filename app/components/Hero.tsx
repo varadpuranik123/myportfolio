@@ -75,14 +75,14 @@ const Hero = () => {
         </div>
       </div>
 
-      <div id="hero-image" className=" absolute lg:left-6 left-3 lg:top-[40%] top-[30%] z-40 border-4 border-[#82A891] bg-[#82A891] rounded-md overflow-hidden">
+      <div id="hero-image" className=" absolute lg:left-6 left-3 lg:top-[40%] top-[28%] z-40 border-4 border-[#82A891] bg-[#82A891] rounded-md overflow-hidden">
         <Image className=' object-cover rounded-sm grayscale lg:size-24 size-22' src="/favicon.png" alt="Hero Image" width={100} height={100} />
       </div>
 
       <div id="hero-name" className="mt-20 lg:px-6 px-3 flex w-full justify-between items-end">
         <div className="flex flex-col items-start justify-end">
             <p className="lg:text-4xl text-2xl font-mono tracking-tighter uppercase">Varad Puranik</p>
-            <p className="lg:text-base text-sm leading-tight text-foreground/75 tracking-tight -mt-0.5 font-semibold">UI/UX Designer • Frontend Developer</p>
+            <p className="lg:text-base md:text-base text-[10px] leading-tight text-foreground/75 tracking-tight -mt-0.5 font-semibold">UI/UX Designer • Frontend Developer</p>
         </div>
         <div className="flex lg:gap-4 gap-2 ">
             <Link href="https://github.com/varadpuranik123" target="_blank" rel="noopener noreferrer">
