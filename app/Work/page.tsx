@@ -9,7 +9,7 @@ const workPage = () => {
     <section className='w-full min-h-fit'>
         <Container className=' min-h-fit'>
             <Navbar />
-            <Work className='' />
+            <Work className='asdasd' />
             <Footer />
         </Container>
     </section>
