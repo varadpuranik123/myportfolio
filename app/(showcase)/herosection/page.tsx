@@ -61,7 +61,7 @@ const HeroSectionDesign = () => {
             <DottedGlowBg />
             <Heading className="w-full lg:h-80 h-50 flex flex-col items-center font-bold text-foreground/75 text-center justify-center font-mono lg:text-3xl text-xl tracking-tight lg:leading-[1.24] md:leading-[1.24] leading-tight capitalize mask-radial-from-10%">
               <Image
-                src="/threedIcons/herosectionicon.png"
+                src="/threedIcons/herosectionicon1.png"
                 alt=""
                 width={150}
                 height={150}
