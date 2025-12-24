@@ -3,6 +3,7 @@ import { promises as fs } from 'fs';
 import type { FC } from 'react';
 import InteractiveButton from '../components/DisplayComponents/InteractiveButton';
 import TextAnimation from '../components/DisplayComponents/TextAnimation';
+import InteractiveCard from '../components/DisplayComponents/InteractiveCard';
 
 export interface ComponentItem {
   slug: string;
@@ -50,6 +51,15 @@ export async function getComponentsData(): Promise<ComponentItem[]> {
     features: string[];
   }> = [
     {
+      slug: 'interactive-card',
+      name: 'Card Design Showcase',
+      description: 'Hover-animated cards with dynamic image reveals and smooth rotation transitions.',
+      fileLocation: 'components/InteractiveCard.tsx',
+      component: InteractiveCard,
+      usageCodePath: 'app/components/DisplayComponents/InteractiveCard.tsx',
+      features: ['Hover reveal effects', 'Smooth rotation transitions', 'Overlapping card layout'],
+    },
+    {
       slug: 'interactive-button',
       name: '3D Perspective Button',
       description: 'A tactile 3D button with a CSS perspective transform that reveals a profile and icon pairing on hover.',
@@ -67,6 +77,7 @@ export async function getComponentsData(): Promise<ComponentItem[]> {
       usageCodePath: 'app/components/DisplayComponents/TextAnimation.tsx',
       features: ['Pulsing indicator', 'Spring-based scrolling', 'Infinite loop'],
     },
+    
 
   ];
 
