@@ -14,7 +14,6 @@ const InteractiveButton = () => {
                     perspective-near
                     rotate-x-40
                     group
-                    group-hover:-translate-y-2
                     border 
                     active:translate-y-5
                     transition-all duration-200 ease-in-out
@@ -22,9 +21,8 @@ const InteractiveButton = () => {
                     bg-white rounded-full
                     tracking-tight
                     ring-2 border-y-2 mt-6 ring-[#82A891]
-                    /* Custom shadow-primary as Tailwind */
+                    /* Custom as Tailwind */
                     [box-shadow:0_8px_0px_0_#14532D]
-                    hover:[box-shadow:0_16px_0px_0_#14532D]
                     group-active:[box-shadow:0_-4px_0px_0_#14532D]
                 "
             >

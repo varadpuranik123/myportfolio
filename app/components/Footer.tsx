@@ -8,11 +8,11 @@ const Footer = ({ className }: { className?: string }) => {
 
 
     const links = [
-        { label: "Work", href: "Work" },
-        { label: "Components", href: "templete" },
-        { label: "Services", href: "service" },
+        { label: "Work", href: "/Work" },
+        { label: "Components", href: "/templete" },
+        { label: "Services", href: "/service" },
         { label: "Blog", href: "/" },
-        { label: "Contact", href: "" },
+        { label: "Contact", href: "/" },
     ]
 
     return (
@@ -75,7 +75,7 @@ const Footer = ({ className }: { className?: string }) => {
                             damping: 12,
                             y: { duration: 1 }
                         }}
-                        className=" ">
+                        className="pt-[0.5px] ">
                         <p className="text-sm tracking-tight font-semibold capitalize">
                             Open to full-time
                         </p>

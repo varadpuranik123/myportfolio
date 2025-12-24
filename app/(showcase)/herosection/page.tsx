@@ -140,7 +140,7 @@ const HeroSectionDesign = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              transition={{ duration: 0.3, }}
               className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm flex items-center justify-center"
               onClick={closeOverlay}
               tabIndex={-1}
@@ -152,14 +152,14 @@ const HeroSectionDesign = () => {
                 initial={false}
                 exit={{ 
                   opacity: 0,
-                  scale: 0.95
+                  // scale: 0.95
                 }}
                 style={{ display: 'flex' }}
                 transition={{
                   duration: 0.3,
-                  layout: { duration: 0.3, ease: "easeInOut" },
-                  opacity: { duration: 0.25 },
-                  scale: { duration: 0.3 }
+                  // layout: { duration: 0.3, },
+                  // opacity: { duration: 0.25 },
+                  // scale: { duration: 0.3 }
                 }}
                 className="relative rounded-xl shadow-2xl shadow-black/75 max-w-[90vw] max-h-[90vh] flex flex-col items-end"
                 onClick={e => e.stopPropagation()}
@@ -179,11 +179,9 @@ const HeroSectionDesign = () => {
                   animate={{ opacity: 1 }}
                   exit={{ 
                     opacity: 0,
-                    filter: "blur(8px)"
                   }}
                   transition={{
                     duration: 0.25,
-                    ease: "easeInOut"
                   }}
                   className="object-cover rounded-md max-w-[80vw] max-h-[70vh]"
                   draggable={false}
