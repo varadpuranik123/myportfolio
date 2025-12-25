@@ -4,6 +4,7 @@ import type { FC } from 'react';
 import InteractiveButton from '../components/DisplayComponents/InteractiveButton';
 import TextAnimation from '../components/DisplayComponents/TextAnimation';
 import InteractiveCard from '../components/DisplayComponents/InteractiveCard';
+import TextRevealImage from '../components/DisplayComponents/TextRevealImage';
 
 export interface ComponentItem {
   slug: string;
@@ -51,6 +52,15 @@ export async function getComponentsData(): Promise<ComponentItem[]> {
     features: string[];
   }> = [
     {
+      slug: 'text-reveal-image',
+      name: 'Text Reveal Showcase',
+      description: 'A center-aligned text hidden behind four dynamic image cards that disperse on hover.',
+      fileLocation: 'components/TextRevealImage.tsx',
+      component: TextRevealImage,
+      usageCodePath: 'app/components/DisplayComponents/TextRevealImage.tsx',
+      features: ['Scatter-and-reveal animation', 'Blur-to-sharp text transition', 'Group-hover coordination'],
+    },
+    {
       slug: 'interactive-card',
       name: 'Card Design Showcase',
       description: 'Hover-animated cards with dynamic image reveals and smooth rotation transitions.',
@@ -77,6 +87,7 @@ export async function getComponentsData(): Promise<ComponentItem[]> {
       usageCodePath: 'app/components/DisplayComponents/TextAnimation.tsx',
       features: ['Pulsing indicator', 'Spring-based scrolling', 'Infinite loop'],
     },
+    
     
 
   ];

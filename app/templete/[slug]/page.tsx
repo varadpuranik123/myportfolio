@@ -5,6 +5,7 @@ import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
 import { IconArrowLeft, IconArrowRight, IconCode, IconList } from '@tabler/icons-react';
 import CodeBlock from '@/app/components/CodeBlock';
+import ComponentPreviewLink from '@/app/components/ComponentPreviewLink';
 
 export default async function SingleTemplate({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -84,12 +85,28 @@ export default async function SingleTemplate({ params }: { params: Promise<{ slu
           </ul>
         </div>
         <div className="flex items-center p-6 justify-between border-t mt-4 border-[#82A891]">
+          {/* {prev ? (
+            <ComponentPreviewLink 
+              href={`/templete/${prev.slug}`} 
+              direction="prev" 
+            >
+              {PrevComponentToRender && <PrevComponentToRender />}
+            </ComponentPreviewLink>
+          ) : <div />}
+          {next ? (
+            <ComponentPreviewLink 
+              href={`/templete/${next.slug}`} 
+              direction="next" 
+            >
+              {NextComponentToRender && <NextComponentToRender />}
+            </ComponentPreviewLink>
+          ) : <div />} */}
           {prev ? <Link href={`/templete/${prev.slug}`} className="w-fit flex gap-1 items-center group">
             <div className="flex gap-1 items-center relative">
 
-              <div className=" border absolute w-60 h-40 flex items-center justify-center -top-20 -left-10 bg-white rounded-md p-2 blur-lg scale-0 group-hover:scale-100 group-hover:blur-none group-hover:-translate-y-26 transition-all duration-300">
+              {/* <div className=" border absolute w-60 min-h-40 flex items-center justify-center -top-20 -left-10 bg-white rounded-md p-2 blur-lg scale-0 group-hover:scale-100 group-hover:blur-none group-hover:-translate-y-26 transition-all duration-300">
                 <PrevComponentToRender />
-              </div>
+              </div> */}
 
               <IconArrowLeft className='size-4 transition-all duration-200 group-hover:-translate-x-0.5' />
               <p className='tracking-tight font-semibold text-sm '>Previous Components</p>
@@ -98,9 +115,9 @@ export default async function SingleTemplate({ params }: { params: Promise<{ slu
           {next ? <Link href={`/templete/${next.slug}`} className="w-fit flex gap-1 items-center group">
             <div className="flex gap-1 items-center relative">
 
-              <div className=" border absolute w-60 h-40 flex items-center justify-center -top-20 -left-10 bg-white rounded-md p-2 blur-lg scale-0 group-hover:scale-100 group-hover:blur-none group-hover:-translate-y-26 transition-all duration-300">
+              {/* <div className=" border absolute w-60 min-h-40 flex items-center justify-center -top-20 -left-10 bg-white rounded-md p-2 blur-lg scale-0 group-hover:scale-100 group-hover:blur-none group-hover:-translate-y-26 transition-all duration-300">
                 <NextComponentToRender />
-              </div>
+              </div> */}
 
               <p className='tracking-tight font-semibold text-sm '>Next Components</p>
               <IconArrowRight className='size-4 transition-all duration-200 group-hover:translate-x-0.5' />

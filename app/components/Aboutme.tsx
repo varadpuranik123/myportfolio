@@ -48,7 +48,7 @@ const Aboutme = () => {
 
             <div className="flex lg:flex-row md:flex-row flex-col item-center gap-x-4 w-full lg:h-64 md:h-64 px-6">
                 <div id="hero-image" className=" border-4 lg:w-64 md:w-64 lg:h-64 w-full h-full border-[#82A891] bg-[#82A891] rounded-lg overflow-hidden">
-                    <Image className=' object-cover rounded-sm object-top grayscale w-full h-full aspect-square' src="/favicon.png" alt="Hero Image" width={100} height={100} />
+                    <Image className=' object-cover rounded-sm object-top grayscale w-full h-full aspect-square' src="/myimage.png" alt="Hero Image" width={100} height={100} />
                 </div>
                 <div className="flex flex-col justify-between lg:py-1 md:py-1 py-6 items-start gap-y-6 lg:gap-y-0 ">
                     <div className="flex flex-col gap-1 max-w-lg">

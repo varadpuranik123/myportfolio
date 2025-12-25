@@ -76,7 +76,7 @@ const Hero = () => {
       </div>
 
       <div id="hero-image" className=" absolute lg:left-6 left-3 lg:top-[40%] top-[28%] z-40 border-4 border-[#82A891] bg-[#82A891] rounded-md overflow-hidden">
-        <Image className=' object-cover rounded-sm grayscale lg:size-24 size-22' src="/favicon.png" alt="Hero Image" width={100} height={100} />
+        <Image className=' object-cover rounded-sm grayscale lg:size-24 size-22' src="/myimage.png" alt="Hero Image" width={100} height={100} />
       </div>
 
       <div id="hero-name" className="mt-20 lg:px-6 px-3 flex w-full justify-between items-end">
