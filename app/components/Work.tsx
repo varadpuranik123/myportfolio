@@ -77,8 +77,8 @@ const WorkCard = ({
   detailsUrl,
 }: typeof workData[0]) => (
   <div className=" border-transparent hover:scale-98 transition-all duration-200 ring-1 ring-[#82A891]/30 shadow-sm shadow-[#82A891]/10 rounded-xl w-full h-fit pb-3 flex flex-col overflow-hidden">
-    <div className="bg-black/10 w-full h-80">
-      <Image className=' object-cover w-full h-full' src={image} alt={imageAlt} width={1920} height={1920} />
+    <div className="bg-black/10 w-full h-fit">
+      <Image className=' object-cover w-full h-full' src={image} alt={imageAlt} width={1920} height={1080} />
     </div>
     <div className="pt-4 pb-2 px-4 flex items-center justify-between gap-1 ">
       <h2 className="text-lg font-semibold tracking-tight">{title}</h2>

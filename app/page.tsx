@@ -6,6 +6,8 @@ import Work from "./components/Work";
 import Aboutme from "./components/Aboutme";
 import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection";
+import PosterSection from "./components/PosterSection";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <Hero />
       <Experience />
       <Work />
+      <HeroSection />
+      <PosterSection />
       <Aboutme />
       <CTASection />
       <Footer className="mt-auto" />

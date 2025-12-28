@@ -54,7 +54,7 @@ const Experience = () => {
           onClick={() => setIsOpen((prev) => !prev)}
           style={{ flex: 1, cursor: "pointer" }}
         >
-          <div className="lg:w-24 w-24 lg:h-32 h-24 overflow-hidden flex items-center justify-center border-transparent ring-1 ring-foreground/10 shadow-sm shadow-black/10 rounded-xl">
+          <div className="lg:w-24 md:w-24 w-32 lg:h-32 md:h-32 h-28 overflow-hidden flex items-center justify-center border-transparent ring-1 ring-foreground/10 shadow-sm shadow-black/10 rounded-xl">
             <Image className='object-contain size-100 scale-125' src='/inddev-logo-wide.svg' alt='' width={100} height={100} />
           </div>
           <div className="flex flex-col lg:ml-4 ml-2 gap-y-px">
