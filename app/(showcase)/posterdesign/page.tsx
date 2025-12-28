@@ -92,7 +92,7 @@ const PosterDesign = () => {
                       "border-[#82A891]",
                       "p-6",
                       idx % 2 === 0 ? "odd:border-r  " : "even:border-b",
-                      !isLastTwo ? "border-b" : "",
+                      !isLastTwo ? "border-b" : "lg:border-b-none md:border-b-none border-b ",
                     ]
                       .filter(Boolean)
                       .join(" ")}
