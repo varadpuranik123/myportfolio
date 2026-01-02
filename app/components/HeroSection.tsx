@@ -61,8 +61,8 @@ const HeroSection = () => {
                                             "h-60",
                                             "border-[#82A891]",
                                             "p-6",
-                                            idx % 2 === 0 ? "odd:border-r  " : "",
-                                            !isLastTwo ? "border-b" : "lgborder-b:border-b-none md:border-b-none ",
+                                            idx % 2 === 0 ? "odd:border-r  " : "even:border-b",
+                                            !isLastTwo ? "border-b" : "lg:border-b-none md:border-b-none border-b",
                                             isFirstTwo ? "border-t" : "",
                                         ]
                                             .filter(Boolean)
