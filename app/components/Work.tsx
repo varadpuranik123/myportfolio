@@ -76,48 +76,52 @@ const WorkCard = ({
   tools,
   detailsUrl,
 }: typeof workData[0]) => (
-  <div className=" border-transparent hover:scale-98 transition-all duration-200 ring-1 ring-[#82A891]/30 shadow-sm shadow-[#82A891]/10 rounded-xl w-full h-fit pb-3 flex flex-col overflow-hidden">
-    <div className="bg-black/10 w-full h-fit">
-      <Image className=' object-cover w-full h-full' src={image} alt={imageAlt} width={1920} height={1080} />
+  <Link href={detailsUrl} className=" last:border-b-0 border-b border-[#82A891] hover:bg-[#82A891]/10 transition-all duration-200 shadow-sm shadow-[#82A891]/10 w-full h-fit flex lg:flex-row-reverse flex-col overflow-hidden">
+    <div className="w-full h-fit lg:p-0 p-2 lg:border-b-0 border-b border-[#82A891]">
+      <Image className=' object-cover w-full h-full lg:rounded-none rounded-xl' src={image} alt={imageAlt} width={1920} height={1080} />
     </div>
-    <div className="pt-4 pb-2 px-4 flex items-center justify-between gap-1 ">
-      <h2 className="text-lg font-semibold tracking-tight">{title}</h2>
-      <div className="flex gap-x-2">
-        {links.map((link, i) =>
-          <Link
-            key={i}
-            href={link.href}
-            target={link.external ? "_blank" : undefined}
-            rel={link.external ? "noopener noreferrer" : undefined}
-          >
-            {link.icon}
-          </Link>
-        )}
+    <div className="flex flex-col w-full justify-between pb-4">
+      <div className="">
+      <div className="pt-4 pb-2 px-4 flex items-center justify-between gap-1 ">
+        <h2 className="text-lg font-semibold tracking-tight">{title}</h2>
+        <div className="flex gap-x-2">
+          {links.map((link, i) =>
+            <Link
+              key={i}
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
+            >
+              {link.icon}
+            </Link>
+          )}
+        </div>
+      </div>
+      <div className="pt-1 pb-2 px-4">
+        <p className="text-sm font-semibold tracking-tight leading-tight">{description}</p>
+      </div>
+      </div>
+      <div className="text-sm flex flex-col px-4 mt-2">
+        <p className="text-sm font-semibold tracking-tight leading-tight">Tools</p>
+        <div className="flex flex-wrap lg:gap-2 gap-1 mt-2">
+          {tools.map((tool, idx) => (
+            <span
+              key={idx}
+              className="bg-[#A2CFAE22] text-[#24422f]/80 lg:text-xs flex gap-0.5 items-center text-[10px] font-mono lg:px-1.5 px-0.5 py-1 rounded whitespace-nowrap border border-[#82A89133] uppercase tracking-tight font-semibold"
+            >
+              {tool.icon} {tool.label}
+            </span>
+          ))}
+        </div>
+        {/* <div className=" mt-4 leading-tight flex ">
+          <Button className="flex gap-1 w-full justify-center py-1.5 items-center">
+            View Details
+            <IconArrowUpRight className='size-4 ' />
+          </Button>
+        </div> */}
       </div>
     </div>
-    <div className="pt-1 pb-2 px-4">
-      <p className="text-sm font-semibold tracking-tight leading-tight">{description}</p>
-    </div>
-    <div className="text-sm flex flex-col px-4 mt-2">
-      <p className="text-sm font-semibold tracking-tight leading-tight">Tools</p>
-      <div className="flex flex-wrap lg:gap-2 gap-1 mt-2">
-        {tools.map((tool, idx) => (
-          <span
-            key={idx}
-            className="bg-[#A2CFAE22] text-[#24422f]/80 lg:text-xs flex gap-0.5 items-center text-[10px] font-mono lg:px-1.5 px-0.5 py-1 rounded whitespace-nowrap border border-[#82A89133] uppercase tracking-tight font-semibold"
-          >
-            {tool.icon} {tool.label}
-          </span>
-        ))}
-      </div>
-      <div className=" mt-4 leading-tight flex ">
-        <Button href={detailsUrl} className="flex gap-1 w-full justify-center py-1.5 items-center">
-          View Details
-          <IconArrowUpRight className='size-4 ' />
-        </Button>
-      </div>
-    </div>
-  </div>
+  </Link>
 );
 
 
@@ -127,11 +131,11 @@ type WorkProps = {
 
 const Work = ({ className }: WorkProps) => {
   return (
-    <section id='work' className={cn('w-full min-h-fit border-b border-[#82A891] flex flex-col font-sans pb-6', className)}>
-      <Heading className='p-6'>
+    <section id='work' className={cn('w-full min-h-fit border-b border-[#82A891] flex flex-col font-sans ', className)}>
+      <Heading className='p-6 border-b border-[#82A891]'>
         Selected Work
       </Heading>
-      <div id="workGrid" className=" px-6 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 w-full h-full">
+      <div id="workGrid" className="flex flex-col w-full h-full">
         {workData.map((work, idx) => (
           <WorkCard key={idx} {...work} />
         ))}
