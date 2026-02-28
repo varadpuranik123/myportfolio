@@ -13,6 +13,8 @@
 # testing
 /coverage
 
+/public/projectImages/atchmaking screens_files/
+
 # next.js
 /.next/
 /out/
